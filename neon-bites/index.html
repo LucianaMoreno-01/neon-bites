@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEON BITES — Cafetería Gamer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav>
+    <div class="logo">NEON<span>BITES</span></div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#reserva">Reservar</a></li> 
+    </ul>
+    <div class="nav-actions">
+      <button id="cart-btn" class="cart-btn-nav">🛒 <span id="cart-count">0</span></button>
+      <a href="#reserva" class="btn btn-primary">Reservar mesa</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">⚡ Cafetería Gamer · Tucumán</div>
+      <h1 class="hero-title">
+        Come.<br>
+        <span class="accent">Juega.</span>
+        <span class="accent2">Recarga.</span>
+      </h1>
+      <p class="hero-sub">Comida épica para jugadores épicos. Ambiente cyberpunk, sabores brutales.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary">Ver el menú</a>
+        <a href="#reserva" class="btn btn-outline">Reservar mesa</a>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll</div>
+  </section>
+
+  <!-- Menú Section -->
+  <section id="menu">
+    <div class="section-label">// nuestro menú</div>
+    <h2 class="section-title">Elige tu <span>carga</span></h2>
+
+    <div class="menu-filters">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="burgers">Burgers</button>
+      <button class="filter-btn" data-filter="wraps">Wraps</button>
+      <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+      <button class="filter-btn" data-filter="postres">Postres</button>
+    </div>
+
+    <div class="menu-grid">
+      <!-- Card 1 -->
+      <div class="menu-card" data-category="burgers">
+        <div class="card-img-placeholder">🍔</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-spicy">Picante</span>
+            <span class="tag tag-new">Nuevo</span>
+          </div>
+          <h3 class="card-name">FINAL BOSS BURGER</h3>
+          <p class="card-desc">Doble medallón, queso ahumado, jalapeños y salsa neón.</p>
+          <div class="card-footer">
+            <span class="card-price" data-price="3200">$3.200</span>
+            <button class="card-btn" data-name="FINAL BOSS BURGER" data-price="3200">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="menu-card" data-category="wraps">
+        <div class="card-img-placeholder">🌮</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-vegan">Vegano</span>
+          </div>
+          <h3 class="card-name">GREEN PIXEL WRAP</h3>
+          <p class="card-desc">Falafels crujientes, hummus de remolacha, palta y pepino.</p>
+          <div class="card-footer">
+            <span class="card-price" data-price="2500">$2.500</span>
+            <button class="card-btn" data-name="GREEN PIXEL WRAP" data-price="2500">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="menu-card" data-category="burgers">
+        <div class="card-img-placeholder">🍜</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-spicy">Picante</span>
+          </div>
+          <h3 class="card-name">RAMEN RESPAWN</h3>
+          <p class="card-desc">Caldo de cerdo, huevo pochado, panca y algas nori.</p>
+          <div class="card-footer">
+            <span class="card-price" data-price="2900">$2.900</span>
+            <button class="card-btn" data-name="RAMEN RESPAWN" data-price="2900">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="menu-card" data-category="bebidas">
+        <div class="card-img-placeholder">🧃</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-vegan">Vegano</span>
+          </div>
+          <h3 class="card-name">ENERGY BOOST SHAKE</h3>
+          <p class="card-desc">Mango, maracuyá, espinaca y proteína de guisante.</p>
+          <div class="card-footer">
+            <span class="card-price" data-price="1600">$1.600</span>
+            <button class="card-btn" data-name="ENERGY BOOST SHAKE" data-price="1600">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="menu-card" data-category="burgers">
+        <div class="card-img-placeholder">🍕</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-new">Nuevo</span>
+          </div>
+          <h3 class="card-name">PIXEL PIZZA SLICE</h3>
+          <p class="card-desc">Masa madre, mozzarella fior di latte, pesto y tomates cherry.</p>
+          <div class="card-footer">
+            <span class="card-price" data-price="2100">$2.100</span>
+            <button class="card-btn" data-name="PIXEL PIZZA SLICE" data-price="2100">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="menu-card" data-category="postres">
+        <div class="card-img-placeholder">🍫</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-vegan">Vegano</span>
+          </div>
+          <h3 class="card-name">DARK MODE BROWNIE</h3>
+          <p class="card-desc">Brownie de chocolate 70%, frutos rojos y helado de coco.</p>
+          <div class="card-footer">
+            <span class="card-price" data-price="1400">$1.400</span>
+            <button class="card-btn" data-name="DARK MODE BROWNIE" data-price="1400">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reserva Section -->
+  <section id="reserva">
+    <div class="reserva-inner">
+      <div class="reserva-info">
+        <div class="section-label">// reservas</div>
+        <h2 class="section-title">Reservá <span>tu mesa</span></h2>
+        <p>Asegurá tu lugar en el universo NEON BITES. Guardado instantáneo en base de datos MySQL.</p>
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <strong>Ubicación</strong>
+              <p>San Miguel de Tucumán</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🕐</div>
+            <div>
+              <strong>Horario</strong>
+              <p>Lun–Vie 12:00–01:00 · Sáb–Dom 14:00–03:00</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div>
+              <strong>Contacto</strong>
+              <p>+54 381 000-0000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="reserva-form" class="reserva-form">
+        <!-- Resumen del carrito adjunto a la reserva -->
+        <div id="resumen-pedido-container" style="background: var(--card); border: 1px dashed var(--neon); padding: 0.8rem 1rem; border-radius: var(--radius); color: var(--text); font-size: 0.95rem;">
+          <strong>Menú seleccionado:</strong> <span id="resumen-pedido-texto" style="color: var(--neon);">Ningún plato seleccionado (puedes reservar igual)</span>
+        </div>
+        <input type="hidden" name="pedido" id="input-pedido-oculto" value="Sin selección de menú">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required />
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="personas">Personas</label>
+            <select id="personas" name="personas">
+              <option>1 persona</option>
+              <option>2 personas</option>
+              <option>3–4 personas</option>
+              <option>5–6 personas</option>
+              <option>Más de 6</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="zona">Zona</label>
+            <select id="zona" name="zona">
+              <option>Gaming Zone</option>
+              <option>Lounge</option>
+              <option>VIP Room</option>
+              <option>Sin preferencia</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje (opcional)</label>
+          <textarea id="mensaje" name="mensaje" placeholder="¿Algún pedido especial o celebración?"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">⚡ Confirmar reserva</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Modal del Carrito -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>⚡ Tu Carrito de Carga</h3>
+        <button id="close-cart" class="close-cart">&times;</button>
+      </div>
+      <div id="cart-items" class="cart-items-list">
+        <p class="empty-cart">Tu carrito está vacío.</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: <span id="cart-total-price">$0</span></div>
+        <button id="checkout-btn" class="btn btn-primary" style="width:100%; margin-top:1rem;">Finalizar Pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">NEON<span>BITES</span></div>
+    <p>© 2026 NeonBites — Cafetería Gamer · San Miguel de Tucumán, Argentina</p>
+    <p>Diseño y desarrollo: Trabajo Práctico — Desarrollo de Software</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
